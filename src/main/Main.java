@@ -12,11 +12,11 @@ public class Main
     {
         Promo promo = new Promo();
         int dayStart = 13;
-        int dayFinish = dayStart + random(15);
         
         for(int i = 0;  i < MasterController.rentalMax ; i++)
         {
         
+            int dayFinish = dayStart + random(15);
             Date dia1 = new Date(2017 ,(9) , dayStart);
             Date dia2 = new Date(2017 ,(9), dayFinish);
             System.out.println("Rental" + i +" date start = " + dia1);
