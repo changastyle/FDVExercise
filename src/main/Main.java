@@ -13,7 +13,7 @@ public class Main
         Promo promo = new Promo();
         int dayStart = 13;
         
-        for(int i = 0;  i < MasterController.rentalMax ; i++)
+        for(int i = 1;  i < MasterController.rentalMax ; i++)
         {
         
             int dayFinish = dayStart + random(15);
@@ -23,9 +23,10 @@ public class Main
             System.out.println("Rental" + i +"  date finish = " + dia2);
         
             Rental rental = new Rental(dia1, dia2);
+            promo.addRental(rental);
             System.out.println("Rental " + i + " total Price = " + rental.getPrice() + "\n");
             
-            promo.addRental(rental);
+            
         }
         
         

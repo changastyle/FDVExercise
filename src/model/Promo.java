@@ -82,17 +82,25 @@ public class Promo
         
         if(rentalList != null)
         {
+            System.out.println("rentalList.size = " + rentalList.size());
+            for(Rental r : rentalList)
+            {
+                System.out.println("r:" + r.getPrice());
+            }
+            
             for(Rental rentalAux : rentalList)
             {
                 totalPrice += rentalAux.getPrice();
             }
             
-            double dicount = (totalPrice * MasterController.discountPercentage ) / 100;
+            double discount = (totalPrice * MasterController.discountPercentage ) / 100;
+            System.out.println("price= " + totalPrice);
+            System.out.println("dicount = "+  discount);
             
             int rentalSize = (rentalList.size() + 1);
             if( rentalSize >= MasterController.rentalMin  && rentalSize <= MasterController.rentalMax )
             {
-                totalPrice = totalPrice - dicount;
+                totalPrice = totalPrice - discount;
             }
         }
         
