@@ -83,10 +83,10 @@ public class Promo
         if(rentalList != null)
         {
             System.out.println("rentalList.size = " + rentalList.size());
-            for(Rental r : rentalList)
+            /*for(Rental r : rentalList)
             {
                 System.out.println("r:" + r.getPrice());
-            }
+            }*/
             
             for(Rental rentalAux : rentalList)
             {
